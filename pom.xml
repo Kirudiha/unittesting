@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.kgfsl</groupId>
+  <artifactId>sampleunittest1</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>sampleunittest1</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  <junit.platform.version>1.1.0</junit.platform.version>
+<junit.jupiter.version>5.1.0</junit.jupiter.version>
+<maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
+  </properties>
+  <dependencies>
+    <!-- <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency> -->
+    <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
+<!-- <dependency>
+    <groupId>org.junit</groupId>
+    <artifactId>junit5-engine</artifactId>
+    <version>5.0.0-ALPHA</version>
+</dependency>
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.0.0-M1</version>
+    <scope>test</scope>
+</dependency> -->
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.1.0</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>5.1.0</version>
+    <scope>test</scope>
+</dependency>
+
+  </dependencies>
+  <build>
+  <plugins>
+  <plugin>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>${maven.surefire.plugin.version}</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>${junit.platform.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+        </dependency>
+    </dependencies>
+</plugin>
+  </plugins>
+  </build>
+</project>
